@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    android:background="@drawable/add_task_dialog_background">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_close"
+        android:background="@drawable/add_task_dialog_close_button_background"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Name: "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_close"
+        />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/main_activity_background"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintStart_toEndOf="@id/tv_task_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_task_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_task_name"
+        />
+
+    <TextView
+        android:id="@+id/tv_task_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority: "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_task_name"
+        />
+
+    <EditText
+        android:id="@+id/et_priority"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:padding="8dp"
+        android:inputType="number"
+        android:gravity="center"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/main_activity_background"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintStart_toStartOf="@id/et_name"
+        app:layout_constraintEnd_toEndOf="@id/et_name"
+        app:layout_constraintTop_toTopOf="@id/tv_task_priority"
+        app:layout_constraintBottom_toBottomOf="@id/tv_task_priority"
+        />
+
+    <TextView
+        android:id="@+id/tv_task_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_task_priority"
+        />
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:gravity="top|left"
+        android:padding="8dp"
+        android:layout_margin="25dp"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/main_activity_background"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_task_description"
+        />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPDATE"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:backgroundTint="@color/main_activity_background"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_description"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
